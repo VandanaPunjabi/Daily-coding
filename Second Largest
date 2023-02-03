@@ -1,0 +1,39 @@
+class Solution{
+public:	
+	// Function returns the second
+	// largest elements
+	int print2largest(int arr[], int n) {
+	  
+   if(n==1){
+       
+       return -1;
+   }
+   
+   int l=arr[0];
+   int s=0;
+   
+   for(int i=1; i<n; i++){
+       
+       if(l < arr[i]){
+           
+           s=l;
+           l=arr[i];
+
+       }
+       
+       if(s<arr[i] && arr[i]<l){
+           
+           s=arr[i];
+       }
+   }
+   
+   if(s==0 || s==l){
+       
+       return -1;
+   }
+   
+   return s;
+   
+}
+
+};
